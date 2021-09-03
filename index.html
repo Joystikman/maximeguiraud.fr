@@ -1,0 +1,228 @@
+<html>
+    <head>
+        <title>Maxime Guiraud 👕</title>
+        <meta name="author" content="Maxime Guiraud">
+        <meta name="description" content="C'est le site de maxime guiraud">
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <base href="http://maximeguiraud.fr/">
+        <style type="text/css">
+            /* reset */
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* ------ */
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+            body{
+                font-family: 'Open Sans', sans-serif;
+            }
+            h1{
+                font-size: 52px;
+                margin : 10px 0px;
+            }
+            h2{
+                font-size: 32px;
+                margin : 5px 0px;
+            }
+            header{
+                text-align: right;
+                margin : 75px 20% 0% 20%;
+                font-size: 20px;
+            }
+            .switch {
+                position: relative;
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
+            .switch input {
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+            .slider {
+                position: absolute;
+                cursor: pointer;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: #7DD4FF;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+
+            .slider:before {
+                position: absolute;
+                content: "";
+                height: 27px;
+                width: 27px;
+                left: 4px;
+                bottom: 4px;
+                background-color: ivory;
+                -webkit-transition: .4s;
+                transition: .4s;
+            }
+            input:checked + .slider {
+                background-color: #305E75;
+            }
+            input:focus + .slider {
+                box-shadow: 0 0 1px #305E75;
+            }
+            input:checked + .slider:before {
+                -webkit-transform: translateX(26px);
+                -ms-transform: translateX(26px);
+                transform: translateX(26px);
+            }
+            .slider.round {
+                border-radius: 34px;
+                padding-top: 2px;
+                padding-left: 2px;
+            }
+            .slider.round:before {
+                border-radius: 50%;
+            } 
+            /* fin slider */
+            content{
+                display: inherit;
+                margin : 25px 20%;
+            }
+            .links{
+                padding : 0px 70px;
+                font-size: 22px;
+            }
+            .links ul {
+                list-style: none;
+            }
+            .links li{
+                margin: 26px 0px;
+            }
+            .links li::before{
+                content: "●";
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            .day li::before {
+                color: #62BFED;
+            }
+            .night li::before {
+                color: #305E75;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            a:visited{
+                color: inherit;
+            }
+            .entete{
+                font-weight: bold;
+                padding: 50px;
+            }
+            .description{
+                margin-top: 40px;
+                padding: 15px;
+            }
+            #day .entete{
+                background-image: url("ressources/dot_sprite_small.png");
+            }
+            #day .entete .description{
+                background-color: #7dd4ff;
+            }
+            .night{
+                background-color: #101F26;
+                color: ivory;
+            }    
+            #night .entete{
+                background-image: url("ressources/dot_sprite_small_night.png");
+            }
+            #night .entete .description{
+                background-color: #305E75;
+            }
+            .invisible{
+                transition-duration: 0.5s;
+                display: none;
+            }
+        </style>
+    </head>
+    <body id="body" class="day">
+        <header>
+            <label class="switch">
+                <input type="checkbox" id="daynight01" onclick="journuit(this)">
+                <span class="slider round">🌞🌚</span>
+            </label>
+        </header>
+        <content>
+            <div id="day">
+                <div class="entete">
+                    <h1>Maxime Guiraud 👔</h1>
+                    <h2>Product Owner</h2>
+                    <p class="description">Je suis product owner depuis près de 3ans, j'aime trier des tableaux kanban et écrire des spécifications.</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a target="_blank" href="https://www.linkedin.com/in/maxime-guiraud/">mon parcours - [LinkedIn]</a></li>
+                        <li><a target="_blank" href="ressources/cv_maximeguiraud.png">mon CV</a></li>
+                        <li><a href="mailto:contact@maximeguiraud.fr">me contacter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="night" class="invisible">
+                <div class="entete">
+                    <h1>Maxime Guiraud 👕</h1>
+                    <h2>Bidouilleur</h2>
+                    <p class="description">Touche-à-tout depuis plus de 26ans, je dessine, je code, je photographie, j'expérimente.</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="https://joystikman.itch.io/" target="_blank" rel="noopener noreferrer">mes créations vidéoludiques - [itch.io]</a></li>
+                        <li><a target="_blank" href="https://github.com/Joystikman">mes expriences numériques - [github]</a></li>
+                        <li><a href="https://www.instagram.com/lesmetronomes/" target="_blank" rel="noopener noreferrer">ma curation musicale - [instagram]</a></li>
+                        <li><a href="https://www.instagram.com/joystikman/" target="_blank" rel="noopener noreferrer">mes photos - [instagram]</a></li>
+                        <li><a href="https://www.twitch.tv/joystikman" target="_blank" rel="noopener noreferrer">mes (rares) streams - [twitch]</a></li>
+                        <li><a href="https://www.youtube.com/user/Joystikman1" target="_blank" rel="noopener noreferrer">mes archives vidéo - [youtube]</a></li>
+                    </ul>
+                </div>
+            </div>
+        </content>
+    </body>
+    <script>
+        window.onload = journuit(document.getElementById("daynight01"));
+        function journuit(checkbox) {
+            console.log(checkbox);
+            if(checkbox.checked){
+                console.log('nuit');
+                document.getElementById("body").classList.add("night");
+                document.getElementById("night").classList.remove("invisible");
+                document.getElementById("day").classList.add("invisible");
+            }
+            else{
+                console.log('jour');
+                document.getElementById("body").classList.remove("night");
+                document.getElementById("day").classList.remove("invisible");
+                document.getElementById("night").classList.add("invisible");
+            }
+        }
+    </script>
+</html>
