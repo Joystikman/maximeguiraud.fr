@@ -1,0 +1,132 @@
+<html>
+    <head>
+        <title>Maxime Guiraud 👕- Produit</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Maxime Guiraud">
+        <meta name="description" content="C'est le site de maxime guiraud">
+        <link rel="icon" type="image/png" href="ressources/favicon.png" />
+        <base href="http://maximeguiraud.fr/">
+        <style type="text/css">
+            /* reset */
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* ------ */
+            @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+            body{
+                font-family: 'Open Sans', sans-serif;
+            }
+            h1{
+                font-size: 52px;
+                margin : 10px 0px;
+            }
+            h2{
+                font-size: 32px;
+                margin : 5px 0px;
+            }
+
+            content{
+                display: inherit;
+                margin : 25px 20%;
+            }
+            .links{
+                padding : 0px 70px;
+                font-size: 22px;
+            }
+            .links ul {
+                list-style: none;
+            }
+            .links li{
+                margin: 26px 0px;
+            }
+            .links li::before{
+                content: "●";
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+            .day li::before {
+                color: #FF7D7D;
+            }
+            .second{
+                margin-left: 50px;
+            }
+            a{
+                text-decoration: none;
+                color: inherit;
+            }
+            a:hover{
+                text-decoration: underline;
+            }
+            a:visited{
+                color: inherit;
+            }
+            .entete{
+                margin-top: 150px;
+                font-weight: bold;
+                padding: 50px;
+            }
+            .description{
+                margin-top: 40px;
+                padding: 15px;
+            }
+            #day .entete{
+                background-image: url("ressources/dot_sprite_small_red.png");
+            }
+            #day .entete .description{
+                background-color: #FF7D7D;
+            }
+            .invisible{
+                transition-duration: 0.5s;
+                display: none;
+            }
+        </style>
+    </head>
+    <body id="body" class="day">
+        <content>
+            <div id="day">
+                <div class="entete">
+                    <h1>Trousse à outil du produit 🧰</h1>
+                    <p class="description">J'ai reuni ici un ensemble de notes et d'outils que j'utilise au quotidien.</p>
+                </div>
+                <div class="links">
+                    <ul>
+                        <li>Mes antisèches</li>
+                        <div class="second">
+                            <ul>
+                                <li><a href="ressources/méthode agile - outils et fonctionnement.pdf" target="_blank" rel="noopener noreferrer">La méthode agile 📃</a></li>
+                                <!-- <li><a href="http://" target="_blank" rel="noopener noreferrer">Etude du besoin 📃</a></li> -->
+                            </ul>
+                        </div>
+                        <li>Mes outils</li>
+                        <div class="second">
+                            <ul>
+                                <li><a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQB5yU2-v-Nd8mUfgTGgdslae9oCDzTl2iHWyW6AIC0bJxQgujlZi6kARCHKBSnANP8bszARuJ0RtBY/pubhtml" target="_blank" rel="noopener noreferrer">TO-DO list</a></li>
+                                <li><a href="https://trello.com/b/sjN7ebMm/product-template" target="_blank" rel="noopener noreferrer">Tableau Kanban</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+                <p><a href="../index.html">⬅️Retour</a></p>
+            </div>
+        </content>
+    </body>
+</html>
